@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Main</title>
+    </head>
+    <body>
+        <h1>Welcome</h1>
+        <a th:href="@{/oauth2/authorization/google}" th:if="${not #httpServletRequest.isUserInRole('USER')}">Sign in with google</a>
+    </body>
+</html>

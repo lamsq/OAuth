@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>User</title>
+    </head>
+    <body>
+        <h1>Welcome, <span th:text="${name}"></span></h1>
+        <p>Email: <span th:text="${email}"></span></p>
+        <a th:href="@{/logout}" th:if="${#httpServletRequest.isUserInRole('USER')}">Log out</a>
+    </body>
+</html>
